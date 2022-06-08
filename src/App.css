@@ -65,7 +65,9 @@ h1 {
 
 .wiki-content {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
 .search-bar {
@@ -80,10 +82,12 @@ h1 {
 }
 
 
-.search-bar > .search-input {
+.search-bar .search-input {
   flex: 1;
   display: flex;
-  padding: 1em 0;
+  padding:  0;
+  box-shadow: 0 6px 10px -8px #666;
+  border-radius: 12px;
 }
 
 .search-input > input {
@@ -91,7 +95,7 @@ h1 {
   font-size: 24px;
   padding: 0 .5em;
   border-radius: 12px 0 0 12px;
-  /* border: 1px solid #eeeeee; */
+  border: 1px solid #eeeeee;
 }
 
 .search-input > button {
@@ -99,4 +103,30 @@ h1 {
   font-size: 18px;
   font-weight: 600;
   border-radius: 0 12px 12px 0;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+
+.search-input > button:hover {
+  color: #1e81b0;
+}
+
+.wiki-results {
+  display: flex;
+  flex-direction: column;
+  gap:.5em;
+}
+.result-item {
+  border-radius: 12px;
+  padding: 1em 1em;
+  box-shadow: 0 4px 12px -6px #666;
+  cursor: pointer;
+}
+
+.result-item > h3 {
+  margin-block-start: 0;
+}
+
+.result-item:hover {
+  background: #abdbe3;
 }

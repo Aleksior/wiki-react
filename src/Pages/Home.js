@@ -25,14 +25,16 @@ export const Home = () => {
 		<div className='wiki-content'>
 			<div className='search-bar'>
 				<h1> Szukajka </h1>
-				<div className='search-input'>
-					<input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-					<button onClick={onSearch}>Szukaj </button>
+				<div style={{width:"100%", display:"flex", padding: ".5em 0"}}>
+					<div className='search-input'>
+						<input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+						<button onClick={onSearch}>Szukaj </button>
+					</div>
 				</div>
 			</div>
-			<div>
+			<div className='wiki-results'>
 				{searchResult.map(r => (
-					<div key={r.pageid}>
+					<div key={r.pageid} className="result-item">
 						<h3>{r.title}</h3>
 						<div dangerouslySetInnerHTML={createMarkup(r.snippet)}></div>
 					</div>
