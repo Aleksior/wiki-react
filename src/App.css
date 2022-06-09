@@ -2,39 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .container {
@@ -45,7 +15,8 @@
 }
 
 .main-content {
-  width: 960px;
+  width: 90%;
+  max-width: 960px;
 }
 
 .navigation-bar {
@@ -57,6 +28,13 @@
   justify-content: flex-end;
   font-size: 24px;
   font-weight: 600;
+}
+
+/* dla telefonow mniejszy font */
+@media only screen and (max-width: 480px) {
+  .navigation-bar {
+    font-size: 16px;
+  }    
 }
 
 h1 {
@@ -77,8 +55,11 @@ h1 {
   gap: 2em;
 }
 
-.search-bar > h1 {
-
+/* dla telefonow nie chcemy napisu szukajka */
+@media only screen and (max-width: 700px) {
+  .search-bar > h1 {
+    display: none;
+  }  
 }
 
 
@@ -98,6 +79,14 @@ h1 {
   border: 1px solid #eeeeee;
 }
 
+/* dla telefonow mniejszy font w inpucie */
+@media only screen and (max-width: 700px) {
+  .search-input > input {
+    font-size: 18px;
+  }    
+}
+
+/* przycisk szukaj */
 .search-input > button {
   padding: 0.5em 2em;
   font-size: 18px;
@@ -107,6 +96,15 @@ h1 {
   cursor: pointer;
 }
 
+/* dla telefonow mniejszy font w przycisku szukaj */
+@media only screen and (max-width: 480px) {
+  .search-input > button {
+    font-size: 16px;
+    padding: .5em 1em;
+  }    
+}
+
+/* przycisk szukaj po najechniu myszka */
 .search-input > button:hover {
   color: #1e81b0;
 }
