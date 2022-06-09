@@ -3,7 +3,7 @@ import selfie from "../assets/AN1.jpg"
 
 export const About = () => {
   return (
-    <div style={{display:"flex", paddingTop:"2em"}}>
+    <div className='about-content'>
         <img style={{width:"300px", borderRadius:"12px"}} src={selfie} alt="" />
         <div style={{paddingLeft:"2em"}}>
             <h1>Aleksy Nowak</h1>
