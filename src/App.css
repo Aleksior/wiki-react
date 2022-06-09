@@ -83,8 +83,18 @@ h1 {
 @media only screen and (max-width: 700px) {
   .search-input > input {
     font-size: 18px;
+    padding: 1em;
   }    
 }
+
+/* dla telefonow mniejszy font w inpucie */
+@media only screen and (max-width: 480px) {
+  .search-input > input {
+    font-size: 17px;
+    padding: .7em;
+  }    
+}
+
 
 /* przycisk szukaj */
 .search-input > button {
